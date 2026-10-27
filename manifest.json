@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "ClearTrace — Privacy & Link Safety",
+  "short_name": "ClearTrace",
+  "version": "1.0.0",
+  "description": "Understand third-party tracking, inspect suspicious links, and choose your browsing privacy controls.",
+  "minimum_chrome_version": "111",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "optional_permissions": ["declarativeNetRequest"],
+  "optional_host_permissions": ["http://*/*", "https://*/*"],
+  "background": {"service_worker": "src/service-worker.js", "type": "module"},
+  "action": {"default_title": "ClearTrace privacy check", "default_popup": "src/popup.html"},
+  "options_page": "src/options.html",
+  "icons": {"16": "icons/icon16.png", "48": "icons/icon48.png", "128": "icons/icon128.png"}
+}
